@@ -1,0 +1,215 @@
+/* delete this! */
+.controls {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+}
+h1, h2, h3, h4, h5 {
+  margin: 0px;
+  padding: 0px;
+}
+.testingFill {
+  background-color: #999;
+  border: 1px solid black;
+}
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+  overflow: hidden;
+}
+.topBar {
+  height: 80px;
+  display:flex;
+  border-bottom: 1px solid #999;
+}
+.bioPic {
+  height:50px;
+  width:50px;
+  margin: 15px;
+}
+.nameContainer {
+  display:flex;
+  flex-direction: column;
+  margin:15px;
+}
+.myName {
+  font-size:24pt;
+  vertical-align:bottom;
+}
+.subtext {
+  color: #889;
+}
+.menu {
+  position: absolute;
+  right:25px;
+  display: flex;
+  font-size: 20px;
+}
+.menuItem {
+  margin:10px;
+  color: #889;
+  transition: 0.5s;
+}
+.mainContent {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subMenu {
+  text-align:center;
+}
+.subMenu h2 {
+  margin: 5px;
+}
+.subMenu span {
+  margin-top:-10px;
+  font-size:16px;
+  color: #889;
+  transition: 0.5s;  
+}
+.hoverText:hover {
+  color: #001;
+}
+.selected {
+  color: #44f !important;
+}
+.slideBar {
+  display: flex;
+  justify-content: center;
+}
+.slideBarLeft {
+  display:flex;
+}
+
+.slideBarRight {
+  display: flex;
+}
+
+.projectTile {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #999;
+  margin:25px;
+  transition: 0.5s;
+}
+
+.slideBarLeft > .projectTile{
+  animation: leftSlideIn 1.5s ease-out;
+  -webkit-animation: leftSlideIn 1.5s ease;
+}
+
+
+.slideBarRight > .projectTile{
+  animation: rightSlideIn 1.5s ease-out;
+  -webkit-animation: rightSlideIn 1.5s ease;
+}
+
+.projectTile:hover {
+  width: 100px;
+  height: 100px;
+  background-color: #555;
+  color: white;
+  margin:25px;
+}
+
+@keyframes leftSlideIn {
+  from {
+    left: -1550px;
+    margin-left: 500%;
+  }
+  to {
+    left: 0px;
+    margin-left: 0%;
+  }
+}
+
+@-webkit-keyframes leftSlideIn {
+  from {
+    left: -1550px;
+  }
+  to {
+    left: 0px;}
+}
+  
+@keyframes rightSlideIn {
+  from {
+    left: 1550px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@-webkit-keyframes rightSlideIn {
+  from {
+    left: 1550px;
+  }
+  to {
+    left: 0px;
+}
+}
+.showcase {
+  position:relative;
+}
+.showcaseHolder {
+  display:flex;
+  border: 1px solid black;
+}
+.slideBar {
+  display:flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+.slideBarLeft {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;  
+}
+.sidePanel {
+  flex: 1;
+}
+.showCasePane {
+  flex: 6;
+}
+.showcaseTop {
+  display: flex;
+}
+.showcasePaneName {
+  display: flex;
+  flex: 6;
+  justify-content: center;
+}
+.showcasePaneLanguages {
+  color: #889;
+  flex: 2;
+}
+.showcaseBody {
+  display: flex;
+  flex-direction: row;
+}
+.showcaseImage > img{
+  width: 250px;
+  height: 250px;
+}
+.showcase .slidedown {
+  animation: slidedown 2s ease;
+  -webkit-animation: slidedown 2s ease;
+}
+@keyframes slidedown {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 1550px;
+  }
+}
+
+@-webkit-keyframes slideDown {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 1550px;
+}
+}
