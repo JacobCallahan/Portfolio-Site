@@ -15,4 +15,14 @@ $(document).ready(function () {
 		testSlider('showcase');
 		$(this).addClass("selected");
 	});
+	$('img').click(function () {
+		$('.modPop').removeClass('hideMe');
+		$('.modFrame').removeClass('hideMe');
+		$('.modImg').removeClass('hideMe');
+	});
+	$('.modPop').click(function () {
+		$('.modPop').addClass('hideMe');
+		$('.modFrame').addClass('hideMe');
+		$('.modImg').addClass('hideMe');
+	});
 });
