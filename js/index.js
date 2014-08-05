@@ -15,7 +15,8 @@ $(document).ready(function () {
 		testSlider('showcase');
 		$(this).addClass("selected");
 	});
-	$('img').click(function () {
+	$('img').click(function () {		
+		$('.modImg').attr("src", $(this).attr("src"));
 		$('.modPop').removeClass('hideMe');
 		$('.modFrame').removeClass('hideMe');
 		$('.modImg').removeClass('hideMe');
