@@ -1,6 +1,7 @@
 h1, h2, h3, h4, h5 {
   margin: 0px;
   padding: 0px;
+  font-weight: normal;
 }
 .testingFill {
   background-color: #999;
@@ -43,6 +44,7 @@ body {
 .menuItem {
   margin:10px;
   color: #889;
+  cursor: pointer;
   transition: 0.5s;
 }
 .mainContent {
@@ -52,6 +54,7 @@ body {
 }
 .subMenu {
   text-align:center;
+  cursor: pointer;
 }
 .subMenu h2 {
   margin: 5px;
