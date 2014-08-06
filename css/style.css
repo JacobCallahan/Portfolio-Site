@@ -1,7 +1,6 @@
 h1, h2, h3, h4, h5 {
   margin: 0px;
   padding: 0px;
-  font-weight: normal;
 }
 .testingFill {
   background-color: #999;
@@ -70,6 +69,7 @@ body {
 }
 .selected {
   color: #BADA55 !important;
+  font-weight: bold;
   border-radius: 4px;
   border-bottom: 1px solid #999;
 }
@@ -157,6 +157,10 @@ body {
 .showcaseBody {
   display: flex;
   flex-direction: row;
+}
+.showcaseImage {
+  width: 250px;
+  height: 250px;
 }
 .showcaseImage > img{
   width: 250px;
