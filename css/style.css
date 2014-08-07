@@ -92,6 +92,7 @@ body {
   position: relative;
   width: 100px;
   height: 100px;
+  font-weight: bold;
   background-color: #999;
   margin:25px;
   transition: 0.5s;
@@ -100,7 +101,6 @@ body {
   background-color: #555;
   color: white;
 }
-
 .slideBarLeft > .projectTile{
   animation: leftSlideIn 1.5s ease-out;
   -webkit-animation: leftSlideIn 1.5s ease;
