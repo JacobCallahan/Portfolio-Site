@@ -72,6 +72,8 @@ body {
   font-weight: bold;
   border-radius: 4px;
   border-bottom: 1px solid #999;
+  -webkit-filter: grayscale(0%) !important;
+  filter: grayscale(0%) !important;
 }
 .slideBar {
   display: flex;
@@ -160,7 +162,7 @@ body {
   flex: 6;
   justify-content: center;
 }
-.showcasePaneLanguages {
+.showcasePanelTechnologies {
   color: #889;
   flex: 2;
 }
