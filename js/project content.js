@@ -31,9 +31,18 @@ softwareArray[3].setShortName("Excel CMS");
 softwareArray[3].setLongName("Excel-based CMS created for ImmerWeb");
 softwareArray[3].setTechnologies("VBA, HTML5, JavaScript");
 softwareArray[3].setDescription("<p>This content management system was created to allow Battlefield Weather Instructors to be able to manage and update the content in the 18th Weather Squadron Immersion Website (see web projects).</p>
-			<p></p>
-			<p></p>");
+			<p>The interactive portion of the CMS is an excel form with a number of custom controls. This allows for the instructor to load a scenario, copy all the model and analysis image files to their appropriate locations, then automatically insert the appropriate HTML5 and JavaScript.</p>
+			<p>Additional controls include 3 forms of satellite imagery, customizable surface weather observations, and the ability to save and load settings.</p>");
 softwareArray[3].setPictures(["ExcelCMS1.png","ExcelCMS2.png","ExcelCMS3.png"]);
+//Software project 5
+softwareArray[4] = new projectContent();
+softwareArray[4].setShortName("Light Data");
+softwareArray[4].setLongName("Solar and Lunar Light Data Impacts");
+softwareArray[4].setTechnologies("VBA, Excel");
+softwareArray[4].setDescription("<p>The Solar and Lunar Light Data Impacts generator was created to eliminate the need for unfamiliar external software, tedious copying of files, and hours worth of wasted time.</p>
+			<p>The algorithmsbehind the implementation were adapted from the work of <a href='http://www.willbell.com/math/mc1.htm' target='blank'>Jean Meeus</a>. Due to the limitations of VBA, a large portion of the algorithms' processes had to be adapted to VBA's capabilities.</p>
+			<p>After optimaization, what used to take an hour, per location, was reduced to less than 1 minute.</p>");
+softwareArray[4].setPictures(["LD1.png","LD2.png"]);
 
 function projectContent() {
 	//this class will be the basis for our project-specific content objects
