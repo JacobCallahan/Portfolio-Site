@@ -43,6 +43,15 @@ softwareArray[4].setDescription("<p>The Solar and Lunar Light Data Impacts gener
 			<p>The algorithmsbehind the implementation were adapted from the work of <a href='http://www.willbell.com/math/mc1.htm' target='blank'>Jean Meeus</a>. Due to the limitations of VBA, a large portion of the algorithms' processes had to be adapted to VBA's capabilities.</p>
 			<p>After optimaization, what used to take an hour, per location, was reduced to less than 1 minute.</p>");
 softwareArray[4].setPictures(["LD1.png","LD2.png"]);
+//Software project 5
+softwareArray[5] = new projectContent();
+softwareArray[5].setShortName("Jupiter");
+softwareArray[5].setLongName("Jupiter, Trie-based Search Engine");
+softwareArray[5].setTechnologies("Java");
+softwareArray[5].setDescription("<p>Jupiter is a document search engine inspired by a college assignment to design a search engine. For this implementation, I wanted to try out something different.</p>
+			<p>The main difference between Jupiter and a standard search engine is the way indices are stored. Instead of storing keywords in a hash table, I opted for a Trie data structure. This is due to a Trie's ability to store the keywords more compactly, while not having to worry about collisions.</p>
+			<p>This was a fantastic opportunity to use a great data structure!</p>");
+softwareArray[5].setPictures(["Jupiter1.png","Jupiter2.png","Jupiter3.png","Jupiter4.png"]);
 
 function projectContent() {
 	//this class will be the basis for our project-specific content objects
