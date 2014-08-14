@@ -53,6 +53,44 @@ softwareArray[5].setDescription("<p>Jupiter is a document search engine inspired
 			<p>This was a fantastic opportunity to use a great data structure!</p>");
 softwareArray[5].setPictures(["Jupiter1.png","Jupiter2.png","Jupiter3.png","Jupiter4.png"]);
 
+var webArray = [];
+//web project 1
+webArray[0] = new projectContent();
+webArray[0].setShortName("OMW");
+webArray[0].setLongName("Open Mic Web");
+webArray[0].setTechnologies("PHP, MySQL, Apache, HTML5, CSS3, JavaScript, JQuery");
+webArray[0].setDescription("<p>Open Mic Web is a music collaboration website with social elements. Users are able to upload tracks and collaborate with other users by linking their tracks together. Normal social elements like profiles, commenting, favorites, and voting were implemented.</p>
+            <p>I developed this site from scratch with a PHP/MySQL backend, while the frontend took advantage of the latest HTML5 and CSS3 features. Much of the content and functionality relied heavily on JQuery and AJAX to dynamically load and update content.</p>
+            <p>Unfortunately, I did not have the funds to bring OMW further than a self-hosted Alpha.</p>");
+webArray[0].setPictures(["omw1.png","omw2.png","omw3.png","omw4.png"]);
+//web project 2
+webArray[1] = new projectContent();
+webArray[1].setShortName("ImmerWeb");
+webArray[1].setLongName("18th Weather Squadron Immersion Website");
+webArray[1].setTechnologies("HTML5, CSS3, JavaScript");
+webArray[1].setDescription("<p>The Weather Immersion Website (ImmerWeb) was created to train Battlefield Weather personnel to become proficient at forecasting for any location in the world. The ImmerWeb allows Instructors to use canned weather data, in order to create a more challenging environment.</p>
+            <p>Because of the restrictive Department of Defense environment, all non-standard functionality had to be custom coded with JavaScript. In order to allow non-programmer instructors the ability to change the content of the website, I wrote a custom CMS in Excel (see Excel CMS).</p>
+            <p class='note'>ImmerWeb is currently being upgraded to a PHP-based site that will be run on a newly aquired small LAN.</p>");
+webArray[1].setPictures(["Immer1.png","Immer2.png","Immer3.png"]);
+//web project 3
+webArray[2] = new projectContent();
+webArray[2].setShortName("BCFFA");
+webArray[2].setLongName("Burke County Friends For Animals");
+webArray[2].setTechnologies("HTML, CSS, JavaScript");
+webArray[2].setDescription("<p>The Burke County Friends For Animals (BCFFA) is one of the largest animal rescues in North Carolina. I volunteered to give the site a much needed update, bringing them into the 21st century.</p>
+            <p>This site needed to be easily maintainable, as they would take over responsibility for updating site content. Luckily, their volunteer had a basic knowledge of HTML and was able to edit simple code. Under this circumstance, backend languages were out.</p>
+            <p class='note'>The site I created for them was their face for nearly 5 years before they decided to move to another design.</p>");
+webArray[2].setPictures(["BCFFA1.jpg","BCFFA2.jpg","BCFFA3.jpg"]);
+//web project 4
+webArray[3] = new projectContent();
+webArray[3].setShortName("This");
+webArray[3].setLongName("This Site!");
+webArray[3].setTechnologies("HTML5, CSS3, JavaScript, JQuery");
+webArray[3].setDescription("<p>This version of my portfolio site was a test of how I can mimmick the functionality of a fully hosted multi-page website, while being restricted to one static HTMl page.</p>
+            <p>In order to mock the behaviour of a multi-page website, pre-written JavaScript content objects are dynamically loaded at multiple levels. The site relies on CSS3 and JQuery to create a great interactive experience.</p>
+            <p>A true hosted variation may be in order. However, I would substitute true AJAX calls and multi-page layouts, instead of a JavaScript OOP implementation.</p>");
+webArray[3].setPictures([""]);
+
 function projectContent() {
 	//this class will be the basis for our project-specific content objects
 	var shortName;
