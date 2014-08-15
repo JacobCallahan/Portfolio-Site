@@ -8,6 +8,13 @@ function slideContentDown(target) {
     	$element.show();
     },1000); //set the timeout equal to your desired animation length
 }
+function imgPopout() {
+	//simple modular popup that switches the image source and unhides the mod	
+	$('.modImg').attr("src", $(this).attr("src"));
+	$('.modPop').removeClass('hideMe');
+	$('.modFrame').removeClass('hideMe');
+	$('.modImg').removeClass('hideMe');
+}
 
 $(document).ready(function () {
 	$('#WebDev').click(function () {
@@ -16,16 +23,16 @@ $(document).ready(function () {
 		slideContentDown('showcase');
 		$(this).addClass("selected");
 	});
-	$('img').click(function () {	
-		//simple modular popup that switches the image source and unhides the mod	
-		$('.modImg').attr("src", $(this).attr("src"));
-		$('.modPop').removeClass('hideMe');
-		$('.modFrame').removeClass('hideMe');
-		$('.modImg').removeClass('hideMe');
-	});
+	
 	$('.modPop').click(function () {
 		$('.modPop').addClass('hideMe');
 		$('.modFrame').addClass('hideMe');
 		$('.modImg').addClass('hideMe');
+	});
+	$('.projectTile').click(function() {
+		var newProjectNum = $(this).attr("projectnumber");
+		$('.projectTile.selected').removeClass('selected');
+		switchSoftwareProject(newProjectNum);
+		$(this).addClass('selected');
 	});
 });
