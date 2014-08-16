@@ -34,5 +34,11 @@ $(document).ready(function () {
 		$('.projectTile.selected').removeClass('selected');
 		switchSoftwareProject(newProjectNum);
 		$(this).addClass('selected');
+	});	
+	$('.subMenu').click(function() {
+		var newContentNum = $(this).attr("Contentnumber");
+		$('.subMenu.selected').removeClass('selected');
+		slideContentDown('showcase');
+		$(this).addClass('selected');
 	});
 });

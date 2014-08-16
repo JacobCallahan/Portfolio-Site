@@ -92,9 +92,17 @@ webArray[3].setDescription("<p>This version of my portfolio site was a test of h
 webArray[3].setPictures(["Immer1.png","Immer2.png","Immer3.png"]); //update this!
 
 var softwareSwitcher = new projectSwitcher();
+var currImgArray = [];
 softwareSwitcher.setProjectArray(softwareArray);
 softwareSwitcher.switchProject(0);
-var currImgArray = softwareSwitcher.getImgArray();
+
+var webSwitcher = new projectSwitcher();
+webSwitcher.setProjectArray(webArray);
+
+var workSwitcher = new contentSwitcher();
+workSwitcher.addContent(softwareSwitcher);
+workSwitcher.addContent(webSwitcher);
+
 function imageSwitcher() {
 	var currImage = 0;
 	$('.showcaseImage').attr('src', 'images/' + currImgArray[currImage]);
@@ -107,8 +115,17 @@ function imageSwitcher() {
 imageSwitcher();
 
 function switchSoftwareProject(projectNum) {
-	softwareSwitcher.switchProject(projectNum);
-	currImgArray = softwareSwitcher.getImgArray();
+	slideContentDown('showcasePane');
+	setTimeout(function () {
+		softwareSwitcher.switchProject(projectNum);
+		currImgArray = softwareSwitcher.getImgArray();
+	}, 500);	
+}
+
+function switchContent(contentNum) {
+	setTimeout(function () {
+		workSwitcher.changeContent(contentNum);
+	}, 1000);	
 }
 
 function projectContent() {
@@ -145,6 +162,7 @@ function projectSwitcher() {
 			//if it isn't the same project, then we will switch it up
 			this.currentProject = newProjectNumber;
 			this.imgArray = this.projectArray[this.currentProject].getPictures();
+			currImgArray = this.imgArray;
 			$('.showcasePane').html(this.getProjectCode());
 		}
 	}
@@ -163,4 +181,47 @@ function projectSwitcher() {
         </div>"
 	}
 
+	this.getProjectTile = function getProjectTile(tileNum) {
+		return "<div class='projectTile selected' projectnumber='" + tileNum + "' style='background: url('images/" + this.imgArray[0] + "') center center'>\
+          <span class='projectTileName'>" + this.projectArray[this.currentProject].getShortName() + "</span></div>";
+	}
+}
+
+function contentSwitcher(nextContent) {
+	var currentContent = 0;
+	var contentArray = [];
+
+	this.addContent = function addContent(newContent) {
+		this.contentArray.push(newContent);
+	}
+
+	this.changeContent = function changeContent(nextContent) {
+		if (this.currentContent != nextContent) {
+			this.currentContent = nextContent;
+			this.contentArray(this.currentContent).switchProject(0);
+			$(".showcase").html(this.drawContent());
+		}
+	}
+
+	this.drawContent = function drawContent() {
+		var leftTiles = [], rightTiles = [], compiledHTML = "<div class='slideBar'>";
+		for (var i = 0; i <= this.contentArray[this.currentContent].length - 1; i++) {
+			if (leftTiles.length > rightTiles.length) { //balance out our left and right side as much as possible
+				rightTiles.push(this.contentArray[this.currentContent].getProjectTile(i)); //add the tile HTMl onto the right side
+			} else {
+				leftTiles.push(this.contentArray[this.currentContent].getProjectTile(i));
+			}
+		};
+		compiledHTML += "<div class='slideBarLeft'>";
+		for (var i = 0; i < leftTiles.length; i++) {
+			compiledHTML += leftTiles[i];
+		};
+		compiledHTML += "<div class='slideBarRight'>";
+		for (var i = 0; i < rightTiles.length; i++) {
+			compiledHTML += rightTiles[i];
+		};
+		compiledHTML += "</div></div><div class='flexRow'><aside class='sidePanel'></aside><div class='showcaseHolder'><div class='showcasePane'>";
+    	compiledHTML += this.contentArray[this.currentContent].getProjectCode();
+    	compiledHTML += "</div></div><aside class='sidePanel'></aside></div></div>";
+	}
 }

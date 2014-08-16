@@ -131,6 +131,10 @@ body {
   animation: slideDown 1s ease;
   -webkit-animation: slideDown 1s ease;
 }
+.showcasePane[slide="yep!"] {
+  animation: fadeOut 0.5s ease;
+  -webkit-animation: fadeOut 0.5s ease;
+}
 .showcaseHolder {
   display:flex;
   padding: 10px;
@@ -153,7 +157,9 @@ body {
   min-width:10%;
 }
 .showCasePane {
-  flex: 6;
+  flex: 6;  
+  animation: fadeIn 0.5s ease;
+  -webkit-animation: fadeIn 0.5s ease;
 }
 .showcaseTop {
   display: flex;
@@ -242,6 +248,23 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 @keyframes slideDown {
