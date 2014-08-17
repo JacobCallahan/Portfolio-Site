@@ -8,9 +8,11 @@ function slideContentDown(target) {
     	$element.show();
     },1000); //set the timeout equal to your desired animation length
 }
-function imgPopout() {
-	//simple modular popup that switches the image source and unhides the mod	
-	$('.modImg').attr("src", $(this).attr("src"));
+function imgPopout(host) {
+	//simple modular popup that switches the image source and unhides the mod
+	console.log(host);
+	console.log($(host));
+	$('.modImg').attr("src", $(host).attr('src'));
 	$('.modPop').removeClass('hideMe');
 	$('.modFrame').removeClass('hideMe');
 	$('.modImg').removeClass('hideMe');
@@ -31,7 +33,7 @@ $(document).ready(function () {
 	$('.projectTile').click(function() {
 		var newProjectNum = $(this).attr("projectnumber");
 		$('.projectTile.selected').removeClass('selected');
-		switchSoftwareProject(newProjectNum);
+		switchProject(newProjectNum);
 		$(this).addClass('selected');
 	});	
 	$('.subMenu.hoverText').click(function() {

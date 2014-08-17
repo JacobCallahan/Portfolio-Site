@@ -178,26 +178,24 @@ function projectSwitcher() {
           <span class='showcasePanelTechnologies'>" + this.projectArray[this.currentProject].getTechnologies() + "</span>\
         </div>\
         <div class='showcaseBody'>\
-          <div ><img class='showcaseImage' src='images/" + this.imgArray[0] + "' onclick='imgPopout()'/></div>\
+          <div ><img class='showcaseImage' src='images/" + this.imgArray[0] + "' onclick='imgPopout(this)'/></div>\
           <div class='showcaseText'>" + this.projectArray[this.currentProject].getDescription() + "</div>\
         </div>"
 	}
 
 	this.getProjectTile = function getProjectTile(tileNum) {
-		var backgroundStyle = "background: url('images/" + this.projectArray[tileNum].getPictures()[0] + "') center center";
-		return "<div class='projectTile selected' projectnumber='" + tileNum + "' style='" + backgroundStyle +'>\
+		var selected = "";
+		if (tileNum == 0) {selected = " selected";}
+		return "<div class='projectTile" + selected + "' projectnumber='" + tileNum + "' style='background: url(\"images/" + this.projectArray[tileNum].getPictures()[0] + "\") center center'>\
           <span class='projectTileName'>" + this.projectArray[tileNum].getShortName() + "</span></div>";
 	}
 
 	this.getAllTiles = function getAllTiles() {
 		var leftTiles = [], rightTiles = [], compiledHTML = "<div class='slideBar'>";
-		console.log(this.projectArray);
 		for (var i = 0; i <= this.projectArray.length - 1; i++) {
 			if (leftTiles.length > rightTiles.length) { //balance out our left and right side as much as possible
-				console.log("right tile! " + this.getProjectTile(i))
 				rightTiles.push(this.getProjectTile(i)); //add the tile HTMl onto the right side
 			} else {
-				console.log("left tile! " + this.getProjectTile(i))
 				leftTiles.push(this.getProjectTile(i));
 			}
 		};
@@ -210,8 +208,6 @@ function projectSwitcher() {
 			compiledHTML += rightTiles[i];
 		};
 		compiledHTML += "</div></div>";
-		console.log(compiledHTML);
-		console.log("----------------------");
 		return compiledHTML;
 	}
 }
@@ -230,11 +226,11 @@ function contentSwitcher() {
 	}
 
 	this.switchProject = function switchProject(nextProject) {
-		this.contentArray[this.currentProject].switchProject(nextProject);
+		this.contentArray[this.currentContent].switchProject(nextProject);
 	}
 
 	this.getImgArray = function getImgArray() {
-		this.contentArray[this.currentProject].getImgArray();
+		return this.contentArray[this.currentContent].getImgArray();
 	}
 
 	this.changeContent = function changeContent(nextContent) {
@@ -245,7 +241,7 @@ function contentSwitcher() {
 			$('.projectTile').click(function() {
 				var newProjectNum = $(this).attr("projectnumber");
 				$('.projectTile.selected').removeClass('selected');
-				switchSoftwareProject(newProjectNum);
+				switchProject(newProjectNum);
 				$(this).addClass('selected');
 			});	
 		}
