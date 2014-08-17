@@ -100,6 +100,7 @@ var webSwitcher = new projectSwitcher();
 webSwitcher.setProjectArray(webArray);
 
 var workSwitcher = new contentSwitcher();
+workSwitcher.init();
 workSwitcher.addContent(softwareSwitcher);
 workSwitcher.addContent(webSwitcher);
 
@@ -114,15 +115,16 @@ function imageSwitcher() {
 }
 imageSwitcher();
 
-function switchSoftwareProject(projectNum) {
+function switchProject(projectNum) {
 	slideContentDown('showcasePane');
 	setTimeout(function () {
-		softwareSwitcher.switchProject(projectNum);
-		currImgArray = softwareSwitcher.getImgArray();
+		workSwitcher.switchProject(projectNum);
+		currImgArray = workSwitcher.getImgArray();
 	}, 500);	
 }
 
 function switchContent(contentNum) {
+	slideContentDown('showcase');
 	setTimeout(function () {
 		workSwitcher.changeContent(contentNum);
 	}, 1000);	
@@ -182,46 +184,79 @@ function projectSwitcher() {
 	}
 
 	this.getProjectTile = function getProjectTile(tileNum) {
-		return "<div class='projectTile selected' projectnumber='" + tileNum + "' style='background: url('images/" + this.imgArray[0] + "') center center'>\
-          <span class='projectTileName'>" + this.projectArray[this.currentProject].getShortName() + "</span></div>";
-	}
-}
-
-function contentSwitcher(nextContent) {
-	var currentContent = 0;
-	var contentArray = [];
-
-	this.addContent = function addContent(newContent) {
-		this.contentArray.push(newContent);
+		var backgroundStyle = "background: url('images/" + this.projectArray[tileNum].getPictures()[0] + "') center center";
+		return "<div class='projectTile selected' projectnumber='" + tileNum + "' style='" + backgroundStyle +'>\
+          <span class='projectTileName'>" + this.projectArray[tileNum].getShortName() + "</span></div>";
 	}
 
-	this.changeContent = function changeContent(nextContent) {
-		if (this.currentContent != nextContent) {
-			this.currentContent = nextContent;
-			this.contentArray(this.currentContent).switchProject(0);
-			$(".showcase").html(this.drawContent());
-		}
-	}
-
-	this.drawContent = function drawContent() {
+	this.getAllTiles = function getAllTiles() {
 		var leftTiles = [], rightTiles = [], compiledHTML = "<div class='slideBar'>";
-		for (var i = 0; i <= this.contentArray[this.currentContent].length - 1; i++) {
+		console.log(this.projectArray);
+		for (var i = 0; i <= this.projectArray.length - 1; i++) {
 			if (leftTiles.length > rightTiles.length) { //balance out our left and right side as much as possible
-				rightTiles.push(this.contentArray[this.currentContent].getProjectTile(i)); //add the tile HTMl onto the right side
+				console.log("right tile! " + this.getProjectTile(i))
+				rightTiles.push(this.getProjectTile(i)); //add the tile HTMl onto the right side
 			} else {
-				leftTiles.push(this.contentArray[this.currentContent].getProjectTile(i));
+				console.log("left tile! " + this.getProjectTile(i))
+				leftTiles.push(this.getProjectTile(i));
 			}
 		};
 		compiledHTML += "<div class='slideBarLeft'>";
 		for (var i = 0; i < leftTiles.length; i++) {
 			compiledHTML += leftTiles[i];
 		};
-		compiledHTML += "<div class='slideBarRight'>";
+		compiledHTML += "</div><div class='slideBarRight'>";
 		for (var i = 0; i < rightTiles.length; i++) {
 			compiledHTML += rightTiles[i];
 		};
-		compiledHTML += "</div></div><div class='flexRow'><aside class='sidePanel'></aside><div class='showcaseHolder'><div class='showcasePane'>";
+		compiledHTML += "</div></div>";
+		console.log(compiledHTML);
+		console.log("----------------------");
+		return compiledHTML;
+	}
+}
+
+function contentSwitcher() {
+	var currentContent;
+	var contentArray;
+
+	this.init = function () {
+		this.currentContent = 0;
+		this.contentArray = [];
+	}
+
+	this.addContent = function addContent(newContent) {
+		this.contentArray.push(newContent);
+	}
+
+	this.switchProject = function switchProject(nextProject) {
+		this.contentArray[this.currentProject].switchProject(nextProject);
+	}
+
+	this.getImgArray = function getImgArray() {
+		this.contentArray[this.currentProject].getImgArray();
+	}
+
+	this.changeContent = function changeContent(nextContent) {
+		if (this.currentContent != nextContent) {
+			this.currentContent = nextContent;
+			this.contentArray[this.currentContent].switchProject(0);
+			$(".showcase").html(this.drawContent());
+			$('.projectTile').click(function() {
+				var newProjectNum = $(this).attr("projectnumber");
+				$('.projectTile.selected').removeClass('selected');
+				switchSoftwareProject(newProjectNum);
+				$(this).addClass('selected');
+			});	
+		}
+	}
+
+	this.drawContent = function drawContent() {
+		var compiledHTML = "";
+		compiledHTML += this.contentArray[this.currentContent].getAllTiles();
+		compiledHTML += "<div class='flexRow'><aside class='sidePanel'></aside><div class='showcaseHolder'><div class='showcasePane'>";
     	compiledHTML += this.contentArray[this.currentContent].getProjectCode();
     	compiledHTML += "</div></div><aside class='sidePanel'></aside></div></div>";
+    	return compiledHTML;
 	}
 }

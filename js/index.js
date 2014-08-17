@@ -22,8 +22,7 @@ $(document).ready(function () {
 		$('#Software').removeClass("selected");
 		slideContentDown('showcase');
 		$(this).addClass("selected");
-	});
-	
+	});	
 	$('.modPop').click(function () {
 		$('.modPop').addClass('hideMe');
 		$('.modFrame').addClass('hideMe');
@@ -35,10 +34,10 @@ $(document).ready(function () {
 		switchSoftwareProject(newProjectNum);
 		$(this).addClass('selected');
 	});	
-	$('.subMenu').click(function() {
-		var newContentNum = $(this).attr("Contentnumber");
+	$('.subMenu.hoverText').click(function() {
+		var newContentNum = $(this).attr("contentnumber");
 		$('.subMenu.selected').removeClass('selected');
-		slideContentDown('showcase');
+		switchContent(newContentNum);
 		$(this).addClass('selected');
 	});
 });
