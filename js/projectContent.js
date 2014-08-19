@@ -89,7 +89,7 @@ webArray[3].setTechnologies("HTML5, CSS3, JavaScript, JQuery");
 webArray[3].setDescription("<p>This version of my portfolio site was a test of how I can mimmick the functionality of a fully hosted multi-page website, while being restricted to one static HTMl page.</p>\
             <p>In order to mock the behaviour of a multi-page website, pre-written JavaScript content objects are dynamically loaded at multiple levels. The site relies on CSS3 and JQuery to create a great interactive experience.</p>\
             <p>A true hosted variation may be in order. However, I would substitute true AJAX calls and multi-page layouts, instead of a JavaScript OOP implementation.</p>");
-webArray[3].setPictures(["Immer1.png","Immer2.png","Immer3.png"]); //update this!
+webArray[3].setPictures(["port1.png","port2.png"]); //update this!
 
 var softwareSwitcher = new projectSwitcher();
 var currImgArray = [];

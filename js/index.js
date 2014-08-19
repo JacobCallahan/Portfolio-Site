@@ -10,8 +10,6 @@ function slideContentDown(target) {
 }
 function imgPopout(host) {
 	//simple modular popup that switches the image source and unhides the mod
-	console.log(host);
-	console.log($(host));
 	$('.modImg').attr("src", $(host).attr('src'));
 	$('.modPop').removeClass('hideMe');
 	$('.modFrame').removeClass('hideMe');

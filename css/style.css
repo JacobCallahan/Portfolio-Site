@@ -75,6 +75,9 @@ body {
   -webkit-filter: grayscale(0%) !important;
   filter: grayscale(0%) !important;
 }
+.note {
+  font-style: italic;
+}
 .slideBar {
   display: flex;
   justify-content: center;
@@ -176,6 +179,7 @@ body {
 .showcaseBody {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .showcaseImage {
   width: 250px;
