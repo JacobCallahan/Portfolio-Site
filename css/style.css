@@ -73,6 +73,8 @@ body {
   border-radius: 4px;
   border-bottom: 1px solid #999;
   -webkit-filter: grayscale(0%) !important;
+  -moz-filter: grayscale(0%) !important;
+  -ms-filter: grayscale(0%) !important;
   filter: grayscale(0%) !important;
 }
 .note {
@@ -104,6 +106,8 @@ body {
   color: white;
   text-shadow: 0px 0px 8px black;
   -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
   filter: grayscale(100%);
   transition: 0.5s;
 }
@@ -112,16 +116,22 @@ body {
   color: black;
   text-shadow: 0px 0px 8px white;
   -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
   filter: grayscale(0%);
 }
 .slideBarLeft > .projectTile{
   animation: leftSlideIn 1.5s ease-out;
   -webkit-animation: leftSlideIn 1.5s ease;
+  -moz-animation: leftSlideIn 1.5s ease;
+  -ms-animation: leftSlideIn 1.5s ease;
 }
 
 .slideBarRight > .projectTile{
   animation: rightSlideIn 1.5s ease-out;
   -webkit-animation: rightSlideIn 1.5s ease;
+  -moz-animation: rightSlideIn 1.5s ease;
+  -ms-animation: rightSlideIn 1.5s ease;
 }
 .showcase {
   display: flex;
@@ -129,14 +139,20 @@ body {
   position:relative;
   animation: fadeIn 1s ease;
   -webkit-animation: fadeIn 1s ease;
+  -moz-animation: fadeIn 1s ease;
+  -ms-animation: fadeIn 1s ease;
 }
 .showcase[slide="yep!"] {
   animation: slideDown 1s ease;
   -webkit-animation: slideDown 1s ease;
+  -moz-animation: slideDown 1s ease;
+  -ms-animation: slideDown 1s ease;
 }
 .showcasePane[slide="yep!"] {
   animation: fadeOut 0.5s ease;
   -webkit-animation: fadeOut 0.5s ease;
+  -moz-animation: fadeOut 0.5s ease;
+  -ms-animation: fadeOut 0.5s ease;
 }
 .showcaseHolder {
   display:flex;
@@ -163,6 +179,8 @@ body {
   flex: 6;  
   animation: fadeIn 0.5s ease;
   -webkit-animation: fadeIn 0.5s ease;
+  -moz-animation: fadeIn 0.5s ease;
+  -ms-animation: fadeIn 0.5s ease;
 }
 .showcaseTop {
   display: flex;
@@ -284,6 +302,22 @@ span[level="10"] {
     opacity: 1;
   }
 }
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -294,6 +328,22 @@ span[level="10"] {
 }
 
 @-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-ms-keyframes fadeOut {
   from {
     opacity: 1;
   }
@@ -322,6 +372,26 @@ span[level="10"] {
     opacity: 0;
   }
 }
+@-moz-keyframes slideDown {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+  to {
+    top: 1000px;
+    opacity: 0;
+  }
+}
+@-ms-keyframes slideDown {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+  to {
+    top: 1000px;
+    opacity: 0;
+  }
+}
 @keyframes leftSlideIn {
   from {
     left: -1550px;
@@ -340,6 +410,20 @@ span[level="10"] {
   to {
     left: 0px;}
 }
+@-moz-keyframes leftSlideIn {
+  from {
+    left: -1550px;
+  }
+  to {
+    left: 0px;}
+}
+@-ms-keyframes leftSlideIn {
+  from {
+    left: -1550px;
+  }
+  to {
+    left: 0px;}
+}
   
 @keyframes rightSlideIn {
   from {
@@ -351,6 +435,22 @@ span[level="10"] {
 }
 
 @-webkit-keyframes rightSlideIn {
+  from {
+    left: 1550px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@-moz-keyframes rightSlideIn {
+  from {
+    left: 1550px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@-ms-keyframes rightSlideIn {
   from {
     left: 1550px;
   }
