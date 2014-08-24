@@ -120,6 +120,20 @@ body {
   -ms-filter: grayscale(0%);
   filter: grayscale(0%);
 }
+.colorInvert {
+  -webkit-filter: invert(0%);
+  -moz-filter: invert(0%);
+  -ms-filter: invert(0%);
+  filter: invert(0%);
+  transition: 1s;
+}
+.colorInvert:hover {
+  -webkit-filter: invert(100%);
+  -moz-filter: invert(100%);
+  -ms-filter: invert(100%);
+  filter: invert(100%);
+}
+
 .slideBarLeft > .projectTile{
   animation: leftSlideIn 1.5s ease-out;
   -webkit-animation: leftSlideIn 1.5s ease;
@@ -257,6 +271,36 @@ body {
 }
 .hideMe {
   display: none;
+}
+input, textarea {
+  flex: 1;
+  margin: 5px;
+  padding: 10px;
+  border:1px solid grey;
+  border-radius: 6px;
+}
+
+.myForm {
+  display: flex;
+  flex-direction:column;
+}
+
+.doubleLine {
+  display:flex;
+  flex-direction: row;
+}
+.formSubmit {
+  display: block; 
+  width:100%; 
+  padding:10px;
+  margin:5px;
+  border: 1px solid rgba(256,256,256,0.5);
+  background-color: #BADA55;
+  color:#fff;
+  border-radius: 5px;
+  font-family:inherit;
+  font-weight:bold;
+  font-size:16pt;
 }
 span[level="1"] {
   font-size: 10px;

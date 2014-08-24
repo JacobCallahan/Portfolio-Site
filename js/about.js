@@ -25,7 +25,7 @@ function getSkillMarkup(skillObject) {
 	return "<span class='skill subtext' level='" + skillObject.level + "'>" + skillObject.skill + "</span>";
 }
 
-function getShowcaseBodyMarkup() {
+function getAboutShowcaseMarkup() {
 	var markup = "<div class='showcaseImage'><img src='images/biopic.png'/></div><div class='showcaseText'>";
 	markup += bioText;
 	markup += "</div><div class='skills'>";
@@ -38,7 +38,7 @@ function getShowcaseBodyMarkup() {
 
 function getAboutMarkup() {
 	var markup = "<div class='subMenu'><h2>About Me</h2></div><div class='showcase'><div class='flexRow'><aside class='sidePanel'></aside><div class='showcaseHolder'><div class='showcasePane'><div class='showcaseTop'></div><div class='showcaseBody'>";
-	markup += getShowcaseBodyMarkup();
+	markup += getAboutShowcaseMarkup();
 	markup += "</div></div></div><aside class='sidePanel'></aside></div></div></div><aside class='sidePanel'></aside></div>";
 	return markup;
 }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Jacob Callahan's Works</title>
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body>
+<div class="modPop hideMe">
+  <div class="modFrame hideMe">
+    <img src="images/climo.png" alt="" class="modImg hideMe">
+  </div>
+</div>
+<div class="topBar">
+  <img src="images/bioPic.png" class="bioPic"/>
+  <div class="nameContainer">
+    <span class="myName">Jacob J Callahan</span>  
+    <span class="subtext">Software Engineer / Web Developer</span> 
+  </div>
+  <div class="menu">
+    <div class="menuItem hoverText">About</div>
+    <div class="menuItem hoverText">Work</div>
+    <div class="menuItem hoverText selected">Contact</div>
+  </div>
+</div>
+<div class="mainContent">
+  <div class="subMenu">
+    <h2>Contact Me</h2>
+  </div>
+  <div class="showcase">
+  <!-- //////////////////////////////////////////////// -->
+ 
+    <div class="flexRow">
+    <aside class="sidePanel"></aside>
+     <div class="showcaseHolder">
+      <div class="showcasePane">
+        <div class="showcaseTop">
+        </div>
+        <div class="showcaseBody">
+          <!-- insert contact info here! -->
+          <div class='showcaseText'>
+            This form will prepare an email link. Alternatively, you could just email me at <a href="mailto:jacob.callahan05@gmail.com" target="blank">jacob.callahan05@gmail.com</a>
+            <form class="myForm">   
+              <div class="doubleLine">
+                <input type="text" name="fName" placeholder="First Name" class="registerItem">
+                <input type="text" name="lName" placeholder="Last Name" class="registerItem">
+              </div>
+              <input type="text" name="subject" placeholder="Subject" class="registerItem">
+              <textarea class="registerItem" rows="4" name="message" placeholder="Type what you want to say here!" wrap="hard"></textarea>
+              <br/>
+                <button type="submit" class="formSubmit blue registerButton" onclick="alert('testing!')">Generate Email</button>  
+            </form>
+          </div>
+          <div class="mainContent" style="width: 170px; padding:20px;"> <!-- reusing the class-->
+            <a href="http://www.linkedin.com/in/jacobcallahan/" target="blank"><img src="images/linkedIn.png" class="colorInvert"></a>
+            <a href="https://github.com/JacobCallahan" target="blank"><img src="images/github.png" class="colorInvert"></a>
+          </div>
+        </div>
+      </div>
+     </div>
+      <aside class="sidePanel"></aside>
+    </div>    
+  <!-- //////////////////////////////////////////////// -->
+  </div>
+</div>
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+  <script src="js/contact.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
