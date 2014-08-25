@@ -26,7 +26,7 @@ function getSkillMarkup(skillObject) {
 }
 
 function getAboutShowcaseMarkup() {
-	var markup = "<div class='showcaseImage'><img src='images/biopic.png'/></div><div class='showcaseText'>";
+	var markup = "<div class='showcaseImage'><img src='images/" + bioPic + "'/></div><div class='showcaseText'>";
 	markup += bioText;
 	markup += "</div><div class='skills'>";
 	for (var i = 0; i < skillArray.length; i++) {
