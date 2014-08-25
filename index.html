@@ -18,9 +18,9 @@
     <span class="subtext">Software Engineer / Web Developer</span> 
   </div>
   <div class="menu">
-    <div class="menuItem hoverText selected" id="aboutPage">About</div>
-    <div class="menuItem hoverText" id="workPage">Work</div>
-    <div class="menuItem hoverText" id="contactPage">Contact</div>
+    <div class="menuItem hoverText selected" id="aboutPage" pagenumber="0">About</div>
+    <div class="menuItem hoverText" id="workPage" pagenumber="1">Work</div>
+    <div class="menuItem hoverText" id="contactPage" pagenumber="2">Contact</div>
   </div>
 </div>
 <div class="mainContent">
@@ -71,7 +71,12 @@
   <!-- //////////////////////////////////////////////// -->
   </div>
 </div>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+  <!-- load our page scripts -->
   <script src="js/index.js"></script>
+  <script src="js/about.js"></script>
+  <script src="js/work.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/pageController.js"></script>
 </body>
 </html>

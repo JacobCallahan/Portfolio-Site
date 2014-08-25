@@ -40,4 +40,9 @@ $(document).ready(function () {
 		switchContent(newContentNum);
 		$(this).addClass('selected');
 	});
+	$('.menuItem.hoverText').click(function() {
+		var newPageNum = $(this).attr("pagenumber");
+		switchPage(newPageNum);
+		$(this).addClass('selected');
+	});
 });

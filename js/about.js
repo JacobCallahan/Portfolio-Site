@@ -9,7 +9,7 @@ skillArray.push({level: "2", skill: "Artificial Intelligence"});
 skillArray.push({level: "5", skill: "C/C++"});
 skillArray.push({level: "4", skill: "C#"});
 skillArray.push({level: "9", skill: "CSS3"});
-skillArray.push({level: "10", skill: ">HTML5"});
+skillArray.push({level: "10", skill: "HTML5"});
 skillArray.push({level: "5", skill: "Java"});
 skillArray.push({level: "9", skill: "JavaScript"});
 skillArray.push({level: "4", skill: "Linux"});
@@ -18,7 +18,7 @@ skillArray.push({level: "6", skill: "MySQL"});
 skillArray.push({level: "4", skill: ".Net"});
 skillArray.push({level: "5", skill: "PHP"});
 skillArray.push({level: "6", skill: "Python"});
-skillArray.push({level: "10", skill: ">Visual Basic"});
+skillArray.push({level: "10", skill: "Visual Basic"});
 skillArray.push({level: "5", skill: "Visual Studio"}); 
 
 function getSkillMarkup(skillObject) {
@@ -37,8 +37,8 @@ function getAboutShowcaseMarkup() {
 }
 
 function getAboutMarkup() {
-	var markup = "<div class='subMenu'><h2>About Me</h2></div><div class='showcase'><div class='flexRow'><aside class='sidePanel'></aside><div class='showcaseHolder'><div class='showcasePane'><div class='showcaseTop'></div><div class='showcaseBody'>";
+	var markup = "<div class='subMenu'><h2>About Me</h2></div><div class='showcase'><div class='flexRow'><aside class='sidePanel'></aside><div class='showcaseHolder'><div class='showcasePane'><div class='showcaseBody'>";
 	markup += getAboutShowcaseMarkup();
-	markup += "</div></div></div><aside class='sidePanel'></aside></div></div></div><aside class='sidePanel'></aside></div>";
+	markup += "</div></div><aside class='sidePanel'></aside></div></div>";
 	return markup;
 }

@@ -94,7 +94,7 @@ webArray[3].setPictures(["port1.png","port2.png"]); //update this!
 var softwareSwitcher = new projectSwitcher();
 var currImgArray = [];
 softwareSwitcher.setProjectArray(softwareArray);
-softwareSwitcher.switchProject(0);
+softwareSwitcher._init();
 
 var webSwitcher = new projectSwitcher();
 webSwitcher.setProjectArray(webArray);
@@ -156,6 +156,12 @@ function projectSwitcher() {
 	var currentProject;
 	var projectArray;
 	var imgArray;
+
+	this._init = function _init() {
+		this.currentProject = 0;
+		this.imgArray = this.projectArray[this.currentProject].getPictures();
+		currImgArray = this.imgArray;
+	}
 
 	this.setProjectArray = function (newProjectArray) {this.projectArray = newProjectArray;}
 

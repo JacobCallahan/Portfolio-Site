@@ -18,9 +18,9 @@
     <span class="subtext">Software Engineer / Web Developer</span> 
   </div>
   <div class="menu">
-    <div class="menuItem hoverText">About</div>
-    <div class="menuItem hoverText">Work</div>
-    <div class="menuItem hoverText selected">Contact</div>
+    <div class="menuItem hoverText" id="aboutPage">About</div>
+    <div class="menuItem hoverText" id="workPage">Work</div>
+    <div class="menuItem hoverText selected" id="contactPage">Contact</div>
   </div>
 </div>
 <div class="mainContent">
@@ -39,19 +39,20 @@
         <div class="showcaseBody">
           <!-- insert contact info here! -->
           <div class='showcaseText'>
-            This form will prepare an email link. Alternatively, you could just email me at <a href="mailto:jacob.callahan05@gmail.com" target="blank">jacob.callahan05@gmail.com</a>
+            This form will prepare an email link. Alternatively, you could could use the icon to the right.
             <form class="myForm">   
               <div class="doubleLine">
-                <input type="text" name="fName" placeholder="First Name" class="registerItem">
-                <input type="text" name="lName" placeholder="Last Name" class="registerItem">
+                <input type="text" id="fName" placeholder="First Name" class="registerItem">
+                <input type="text" id="lName" placeholder="Last Name" class="registerItem">
               </div>
-              <input type="text" name="subject" placeholder="Subject" class="registerItem">
-              <textarea class="registerItem" rows="4" name="message" placeholder="Type what you want to say here!" wrap="hard"></textarea>
+              <input type="text" id="subject" placeholder="Subject" class="registerItem">
+              <textarea class="registerItem" rows="4" id="message" placeholder="Type what you want to say here!" wrap="hard"></textarea>
               <br/>
-                <button type="submit" class="formSubmit blue registerButton" onclick="alert('testing!')">Generate Email</button>  
+                <button type="submit" class="formSubmit blue registerButton">Generate Email</button>  
             </form>
           </div>
           <div class="mainContent" style="width: 170px; padding:20px;"> <!-- reusing the class-->
+            <a href="mailto:jacob.callahan05@gmail.com" target="blank"><img src="images/gmail.png" class="colorInvert"></a>
             <a href="http://www.linkedin.com/in/jacobcallahan/" target="blank"><img src="images/linkedIn.png" class="colorInvert"></a>
             <a href="https://github.com/JacobCallahan" target="blank"><img src="images/github.png" class="colorInvert"></a>
           </div>
@@ -63,7 +64,7 @@
   <!-- //////////////////////////////////////////////// -->
   </div>
 </div>
-  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="js/contact.js"></script>
   <script src="js/index.js"></script>
 </body>
