@@ -1,0 +1,516 @@
+/*forgive the mess!!*/
+h1, h2, h3, h4, h5 {
+  margin: 0px;
+  padding: 0px;
+}
+.testingFill {
+  background-color: #999;
+  border: 1px solid black;
+}
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+  overflow: hidden;
+}
+.topBar {
+  height: 80px;
+  display:flex;
+  border-radius: 10px;
+  border-bottom: 1px solid #999;
+}
+.bioPic {
+  height:50px;
+  width:50px;
+  margin: 15px;
+}
+.nameContainer {
+  display:flex;
+  flex-direction: column;
+  margin:15px;
+}
+.myName {
+  font-size:24pt;
+  vertical-align:bottom;
+}
+.subtext {
+  color: #889;
+}
+.menu {
+  position: absolute;
+  right:25px;
+  display: flex;
+  font-size: 20px;
+}
+.menuItem {
+  margin:10px;
+  color: #889;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.mainContent {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subMenu {
+  text-align:center;
+  cursor: pointer;
+}
+.subMenu h2 {
+  margin: 5px;
+}
+.subMenu span {
+  margin-top:-10px;
+  font-size:16px;
+  color: #889;
+  transition: 0.5s;  
+}
+.hoverText:hover {
+  color: #001;
+}
+.selected {
+  color: #BADA55 !important;
+  font-weight: bold;
+  border-radius: 4px;
+  border-bottom: 1px solid #999;
+  -webkit-filter: grayscale(0%) !important;
+  -moz-filter: grayscale(0%) !important;
+  -ms-filter: grayscale(0%) !important;
+  filter: grayscale(0%) !important;
+}
+.note {
+  font-style: italic;
+}
+.slideBar {
+  display: flex;
+  justify-content: center;
+}
+.slideBarLeft {
+  display:flex;
+}
+
+.slideBarRight {
+  display: flex;
+}
+
+.projectTile {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  font-weight: bold;
+  background-color: #999;
+  border: 1px solid #999;
+  margin:25px;
+  color: white;
+  text-shadow: 0px 0px 8px black;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+.projectTile:hover {
+  background-color: #555;
+  color: black;
+  text-shadow: 0px 0px 8px white;
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+.colorInvert {
+  -webkit-filter: invert(0%);
+  -moz-filter: invert(0%);
+  -ms-filter: invert(0%);
+  filter: invert(0%);
+  transition: 1s;
+}
+.colorInvert:hover {
+  -webkit-filter: invert(100%);
+  -moz-filter: invert(100%);
+  -ms-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.slideBarLeft > .projectTile{
+  animation: leftSlideIn 1.5s ease-out;
+  -webkit-animation: leftSlideIn 1.5s ease;
+  -moz-animation: leftSlideIn 1.5s ease;
+  -ms-animation: leftSlideIn 1.5s ease;
+}
+
+.slideBarRight > .projectTile{
+  animation: rightSlideIn 1.5s ease-out;
+  -webkit-animation: rightSlideIn 1.5s ease;
+  -moz-animation: rightSlideIn 1.5s ease;
+  -ms-animation: rightSlideIn 1.5s ease;
+}
+.showcase {
+  display: flex;
+  flex-direction: column;
+  position:relative;
+  animation: fadeIn 1s ease;
+  -webkit-animation: fadeIn 1s ease;
+  -moz-animation: fadeIn 1s ease;
+  -ms-animation: fadeIn 1s ease;
+}
+.showcase[slide="yep!"] {
+  animation: slideDown 1s ease;
+  -webkit-animation: slideDown 1s ease;
+  -moz-animation: slideDown 1s ease;
+  -ms-animation: slideDown 1s ease;
+}
+.showcasePane[slide="yep!"] {
+  animation: fadeOut 0.5s ease;
+  -webkit-animation: fadeOut 0.5s ease;
+  -moz-animation: fadeOut 0.5s ease;
+  -ms-animation: fadeOut 0.5s ease;
+}
+.showcaseHolder {
+  display:flex;
+  padding: 10px;
+  border-radius: 10px;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+}
+.slideBar {
+  display:flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+.slideBarLeft {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;  
+}
+.sidePanel {
+  flex: 1;
+  min-width:10%;
+}
+.showCasePane {
+  flex: 6;  
+  animation: fadeIn 0.5s ease;
+  -webkit-animation: fadeIn 0.5s ease;
+  -moz-animation: fadeIn 0.5s ease;
+  -ms-animation: fadeIn 0.5s ease;
+}
+.showcaseTop {
+  display: flex;
+}
+.showcasePaneName {
+  display: flex;
+  flex: 6;
+  justify-content: center;
+}
+.showcasePanelTechnologies {
+  color: #889;
+  flex: 2;
+}
+.showcaseBody {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.showcaseImage {
+  min-width: 250px;
+  width: 250px;
+  height: 250px;
+  background-color: #999;
+  background-position: center center;
+  background-size: cover;
+  border: 1px solid black;
+}
+.showcaseImage > img{
+  width: 250px;
+  height: 250px;
+}
+.showcaseText {
+  padding: 10px;
+  max-width: 70%;
+}
+.skills {
+  min-width: 150px;
+}
+.modPop {
+  position: absolute;
+  background-color: rgba(0,0,0,0.25);
+  margin:0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  z-index:97;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
+.modFrame {
+  position: absolute;
+  background-color: white;
+  border: 3px solid #999;
+  min-width: 600px;
+  height: 450px;
+  margin-left: -300px;
+  margin-top: -225px;
+  left: 50%;
+  top: 50%;
+  z-index:98;
+}
+.modImg {
+  position: absolute;
+  width: 500px;
+  height: 350px;
+  margin-left: -250px;
+  margin-top: -175px;
+  left: 50%;
+  top: 50%;
+  z-index:99;
+}
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+.hideMe {
+  display: none;
+}
+input, textarea {
+  flex: 1;
+  margin: 5px;
+  padding: 10px;
+  border:1px solid grey;
+  border-radius: 6px;
+}
+
+.myForm {
+  display: flex;
+  flex-direction:column;
+}
+
+.doubleLine {
+  display:flex;
+  flex-direction: row;
+}
+.formSubmit {
+  display: block; 
+  width:100%; 
+  padding:10px;
+  margin:5px;
+  border: 1px solid rgba(256,256,256,0.5);
+  background-color: #BADA55;
+  color:#fff;
+  border-radius: 5px;
+  font-family:inherit;
+  font-weight:bold;
+  font-size:16pt;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.formSubmit:hover {
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+}
+span[level="1"] {
+  font-size: 10px;
+}
+span[level="2"] {
+  font-size: 12px;
+}
+span[level="3"] {
+  font-size: 14px;
+}
+span[level="4"] {
+  font-size: 16px;
+}
+span[level="5"] {
+  font-size: 18px;
+}
+span[level="6"] {
+  font-size: 20px;
+}
+span[level="7"] {
+  font-size: 22px;
+}
+span[level="8"] {
+  font-size: 24px;
+}
+span[level="9"] {
+  font-size: 26px;
+}
+span[level="10"] {
+  font-size: 28px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-ms-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slideDown {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+  to {
+    top: 1000px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideDown {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+  to {
+    top: 1000px;
+    opacity: 0;
+  }
+}
+@-moz-keyframes slideDown {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+  to {
+    top: 1000px;
+    opacity: 0;
+  }
+}
+@-ms-keyframes slideDown {
+  from {
+    top: 0px;
+    opacity: 1;
+  }
+  to {
+    top: 1000px;
+    opacity: 0;
+  }
+}
+@keyframes leftSlideIn {
+  from {
+    left: -1550px;
+    margin-left: 500%;
+  }
+  to {
+    left: 0px;
+    margin-left: 0%;
+  }
+}
+
+@-webkit-keyframes leftSlideIn {
+  from {
+    left: -1550px;
+  }
+  to {
+    left: 0px;}
+}
+@-moz-keyframes leftSlideIn {
+  from {
+    left: -1550px;
+  }
+  to {
+    left: 0px;}
+}
+@-ms-keyframes leftSlideIn {
+  from {
+    left: -1550px;
+  }
+  to {
+    left: 0px;}
+}
+  
+@keyframes rightSlideIn {
+  from {
+    left: 1550px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@-webkit-keyframes rightSlideIn {
+  from {
+    left: 1550px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@-moz-keyframes rightSlideIn {
+  from {
+    left: 1550px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@-ms-keyframes rightSlideIn {
+  from {
+    left: 1550px;
+  }
+  to {
+    left: 0px;
+  }
+}
