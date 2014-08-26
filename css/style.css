@@ -14,7 +14,9 @@ body {
 }
 .topBar {
   height: 80px;
-  display:flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   border-radius: 10px;
   border-bottom: 1px solid #999;
 }
@@ -24,7 +26,11 @@ body {
   margin: 15px;
 }
 .nameContainer {
-  display:flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
   flex-direction: column;
   margin:15px;
 }
@@ -38,6 +44,8 @@ body {
 .menu {
   position: absolute;
   right:25px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   font-size: 20px;
 }
@@ -48,8 +56,14 @@ body {
   transition: 0.5s;
 }
 .mainContent {
-  display:flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
   flex-direction: column;
+  -ms-align-items: center;
+  -webkit-align-items: center;
   align-items: center;
 }
 .subMenu {
@@ -82,20 +96,34 @@ body {
   font-style: italic;
 }
 .slideBar {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 .slideBarLeft {
-  display:flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 }
 
 .slideBarRight {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
 }
 
 .projectTile {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -ms-align-items: flex-end;
+  -webkit-align-items: flex-end;
   align-items: flex-end;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
   justify-content: center;
   position: relative;
   width: 100px;
@@ -149,7 +177,11 @@ body {
   -ms-animation: rightSlideIn 1.5s ease;
 }
 .showcase {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
   flex-direction: column;
   position:relative;
   animation: fadeIn 1s ease;
@@ -170,20 +202,32 @@ body {
   -ms-animation: fadeOut 0.5s ease;
 }
 .showcaseHolder {
-  display:flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   padding: 10px;
   border-radius: 10px;
   border-left: 1px solid #999;
   border-right: 1px solid #999;
 }
 .slideBar {
-  display:flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
   flex-direction: row;
   /* justify-content: space-between; */
 }
 .slideBarLeft {
-  display:flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
   flex-direction: row;
+  -ms-justify-content: space-between;
+  -webkit-justify-content: space-between;
   justify-content: space-between;  
 }
 .sidePanel {
@@ -198,11 +242,17 @@ body {
   -ms-animation: fadeIn 0.5s ease;
 }
 .showcaseTop {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
 }
 .showcasePaneName {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex: 6;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 .showcasePanelTechnologies {
@@ -210,8 +260,14 @@ body {
   flex: 2;
 }
 .showcaseBody {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
   flex-direction: row;
+  -ms-align-items: center;
+  -webkit-align-items: center;
   align-items: center;
 }
 .showcaseImage {
@@ -267,7 +323,11 @@ body {
   z-index:99;
 }
 .flexRow {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
   flex-direction: row;
 }
 .hideMe {
@@ -282,12 +342,20 @@ input, textarea {
 }
 
 .myForm {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
   flex-direction:column;
 }
 
 .doubleLine {
-  display:flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
   flex-direction: row;
 }
 .formSubmit {
