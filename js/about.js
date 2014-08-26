@@ -17,7 +17,7 @@ skillArray.push({level: "2", skill: "Machine Learning"});
 skillArray.push({level: "6", skill: "MySQL"});
 skillArray.push({level: "4", skill: ".Net"});
 skillArray.push({level: "5", skill: "PHP"});
-skillArray.push({level: "6", skill: "Python"});
+skillArray.push({level: "7", skill: "Python"});
 skillArray.push({level: "10", skill: "Visual Basic"});
 skillArray.push({level: "5", skill: "Visual Studio"}); 
 
