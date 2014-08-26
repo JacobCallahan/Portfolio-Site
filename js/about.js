@@ -22,7 +22,7 @@ skillArray.push({level: "10", skill: "Visual Basic"});
 skillArray.push({level: "5", skill: "Visual Studio"}); 
 
 function getSkillMarkup(skillObject) {
-	return "<span class='skill subtext' level='" + skillObject.level + "'>" + skillObject.skill + "</span>";
+	return "<span class='skill subtext' level='" + skillObject.level + "'>" + skillObject.skill + "</span> ";
 }
 
 function getAboutShowcaseMarkup() {
