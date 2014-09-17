@@ -40,7 +40,7 @@ softwareArray[4].setShortName("Light Data");
 softwareArray[4].setLongName("Solar and Lunar Light Data Impacts");
 softwareArray[4].setTechnologies("VBA, Excel");
 softwareArray[4].setDescription("<p>The Solar and Lunar Light Data Impacts generator was created to eliminate the need for unfamiliar external software, tedious copying of files, and hours worth of wasted time.</p>\
-			<p>The algorithmsbehind the implementation were adapted from the work of <a href='http://www.willbell.com/math/mc1.htm' target='blank'>Jean Meeus</a>. Due to the limitations of VBA, a large portion of the algorithms' processes had to be adapted to VBA's capabilities.</p>\
+			<p>The algorithms behind the implementation were adapted from the work of <a href='http://www.willbell.com/math/mc1.htm' target='blank'>Jean Meeus</a>. Due to the limitations of VBA, a large portion of the algorithms' processes had to be adapted to VBA's capabilities.</p>\
 			<p>After optimaization, what used to take an hour, per location, was reduced to less than 1 minute.</p>");
 softwareArray[4].setPictures(["LD1.png","LD2.png"]);
 //Software project 5
