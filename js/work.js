@@ -40,7 +40,7 @@ softwareArray[4].setShortName("Light Data");
 softwareArray[4].setLongName("Solar and Lunar Light Data Impacts");
 softwareArray[4].setTechnologies("VBA, Excel");
 softwareArray[4].setDescription("<p>The Solar and Lunar Light Data Impacts generator was created to eliminate the need for unfamiliar external software, tedious copying of files, and hours worth of wasted time.</p>\
-			<p>The algorithmsbehind the implementation were adapted from the work of <a href='http://www.willbell.com/math/mc1.htm' target='blank'>Jean Meeus</a>. Due to the limitations of VBA, a large portion of the algorithms' processes had to be adapted to VBA's capabilities.</p>\
+			<p>The algorithms behind the implementation were adapted from the work of <a href='http://www.willbell.com/math/mc1.htm' target='blank'>Jean Meeus</a>. Due to the limitations of VBA, a large portion of the algorithms' processes had to be adapted to VBA's capabilities.</p>\
 			<p>After optimaization, what used to take an hour, per location, was reduced to less than 1 minute.</p>");
 softwareArray[4].setPictures(["LD1.png","LD2.png"]);
 //Software project 5
@@ -58,7 +58,7 @@ var webArray = [];
 webArray[0] = new projectContent();
 webArray[0].setShortName("OMW");
 webArray[0].setLongName("Open Mic Web");
-webArray[0].setTechnologies("PHP, MySQL, Apache, HTML5, CSS3, JavaScript, JQuery");
+webArray[0].setTechnologies("PHP, MySQL, Apache, HTML5, CSS3, JavaScript, JQuery, AJAX");
 webArray[0].setDescription("<p>Open Mic Web is a music collaboration website with social elements. Users are able to upload tracks and collaborate with other users by linking their tracks together. Normal social elements like profiles, commenting, favorites, and voting were implemented.</p>\
             <p>I developed this site from scratch with a PHP/MySQL backend, while the frontend took advantage of the latest HTML5 and CSS3 features. Much of the content and functionality relied heavily on JQuery and AJAX to dynamically load and update content.</p>\
             <p>Unfortunately, I did not have the funds to bring OMW further than a self-hosted Alpha.</p>");
@@ -74,13 +74,13 @@ webArray[1].setDescription("<p>The Weather Immersion Website (ImmerWeb) was crea
 webArray[1].setPictures(["Immer1.png","Immer2.png","Immer3.png"]);
 //web project 3
 webArray[2] = new projectContent();
-webArray[2].setShortName("BCFFA");
-webArray[2].setLongName("Burke County Friends For Animals");
-webArray[2].setTechnologies("HTML, CSS, JavaScript");
-webArray[2].setDescription("<p>The Burke County Friends For Animals (BCFFA) is one of the largest animal rescues in North Carolina. I volunteered to give the site a much needed update, bringing them into the 21st century.</p>\
-            <p>This site needed to be easily maintainable, as they would take over responsibility for updating site content. Luckily, their volunteer had a basic knowledge of HTML and was able to edit simple code. Under this circumstance, backend languages were out.</p>\
-            <p class='note'>The site I created for them was their face for nearly 5 years before they decided to move to another design.</p>");
-webArray[2].setPictures(["BCFFA1.jpg","BCFFA2.jpg","BCFFA3.jpg"]);
+webArray[2].setShortName("SWW");
+webArray[2].setLongName("Simple Woot Watcher");
+webArray[2].setTechnologies("PHP, HTML5, CSS3, JavaScript, JQuery, AJAX");
+webArray[2].setDescription("<p>The <a href='http://simplewootwatcher.com/' target='_blank'>Simple Woot Watcher</a> was created when my wife and I wanted to have a super light-weight website to watch what is currently on <a href='http://www.woot.com/' target='_blank'>Woot.com</a>. It had to be mobile-friendly, flexible, and ad-free. That weekend I took aside around 12 hours to create it.</p>\
+            <p>The site uses PHP to create the markup of the index page, as well as the AJAX helper functions. The majority of the page's functionality is written in JQuery and JavaScript. I took advantage of new HTML5 and CSS3 properties to achieve the flexibility and design.</p>\
+            <p>The site site allows for users to specify keywords that will trigger an alarm sound and will highlight the responsible item. Additonally, Woot-Off mode refreshes the content every 10 seconds with AJAX requests. Finally, the site remembers content that the user has seen and will highlight new products.</p>");
+webArray[2].setPictures(["SWW1.png","SWW2.png","SWW3.png"]);
 //web project 4
 webArray[3] = new projectContent();
 webArray[3].setShortName("This");

@@ -37,6 +37,7 @@ function pageController() {
 		switch (this.currentPage) {
 			case "0":
 				//this is our about page
+				window.document.title="Jacob Callahan - About";
 				return getAboutMarkup();
 				break;
 			case "1":
@@ -45,14 +46,17 @@ function pageController() {
 				var preMarkup = '<div class="subMenu"><h2>Selected Works</h2><span class="subMenu selected hoverText" id="Software" contentnumber="0">\
 				                 Software</span> &middot;<span class="subMenu hoverText" id="WebDev" contentnumber="1">Web Dev</span></div><div class="showcase">';
 				var postMarkup = "</div>";
+				window.document.title="Jacob Callahan - Works";
 				return preMarkup + this.workController.drawContent() + postMarkup;
 				break;
 			case "2":
 				//this is our contact page
+				window.document.title="Jacob Callahan - Contact";
 				return getContactMarkup();
 				break;
 			default:				
 				//the default will be the about page
+				window.document.title="Jacob Callahan - About";
 				return getAboutMarkup();
 				break;
 		}
